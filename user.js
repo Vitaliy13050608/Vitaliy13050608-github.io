@@ -52,9 +52,16 @@ $(document).ready(function(){
               update_table();
           }  
         });
-     });
- 
-    function update_table()  
+     
+    });
+   document.getElementById("firstname").value ="";
+   document.getElementById("lastname").value ="";
+   document.getElementById("firstname").value ="";
+   document.getElementById("lastname").value ="";
+   document.getElementById("role").value ="";
+   document.getElementById('activation').checked = false;
+   
+   function update_table() 
     {  
         $.ajax({  
             url: "users_update.php",  
