@@ -37,6 +37,7 @@ $(document).ready(function(){
          }
       }
    });
+  
 
    $('#ok_down').click(function(){
       let entries = [];
@@ -92,6 +93,7 @@ $(document).ready(function(){
       });
    });
 
+
    $('.save').click(function(event){
       event.preventDefault();
       $('#add').modal('hide');
@@ -109,6 +111,7 @@ $(document).ready(function(){
         }  
       });
    });
+   
 
    function update_table()  
    {  
