@@ -4,8 +4,8 @@ body {
  background: #f3f3f3;   
 }
 .switch {
- margin-left:10px;
-}
+ margin:auto;
+ }
 
 .check-box {
     position: relative;
@@ -69,6 +69,16 @@ input:checked[type="checkbox"]:before {
     margin: 10px;
 }
 
+.btn-primary {
+    margin-left: 100px;
+}
+
+#ok_down {
+    margin: 0;
+}
+#ok_top {
+    margin: 0;
+}
 
 .active-circle {
     color: green;
@@ -114,6 +124,11 @@ table {
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 0.25rem;
+}
+.col-form-label {
+    padding-right: 10px;
+    margin: 10px;
+    float:inline-start;
 }
 
 
