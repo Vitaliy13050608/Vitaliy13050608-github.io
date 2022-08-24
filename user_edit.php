@@ -14,17 +14,17 @@ if (!$id) {
     die();
 }
 
-if (! preg_match ("/^[a-zA-z]*$/", $firstname) ) {
+if ( preg_match ("/[^a-za-яё]/iu", $firstname) ) {
     echo "{status: false, error:true, message: firstname '$firstname' is wrong}";
     die();
 }
 
-if (! preg_match ("/^[a-zA-z]*$/", $lastname) ) {
+if ( preg_match ("/[^a-za-яё]/iu", $lastname) ) {
     echo "{status: false, error:true, message: lastname '$lastname' is wrong}";
     die();
 }
 
-$mysql = new mysqli("localhost","root","","php-mysql");
+$mysql = new mysqli("localhost","goshivskiy","Goshandr2022","goshivskiy");
 $query = $mysql->query("UPDATE `users` SET `users`.`firstname`='$firstname', `users`.`lastname`='$lastname', `users`.`role`='$role', `users`.`activation`='$activation' WHERE `users`.`id` = $id"); 
 if($query){
     echo "{status: true, error:null, user {id: $id, firstname: $firstname, lastname: $lastname, role: $role, activation: $activation} }";
