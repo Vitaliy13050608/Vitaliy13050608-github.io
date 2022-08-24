@@ -1,6 +1,6 @@
 <?php
 $ids = $_POST['id'];
-$mysql = new mysqli("localhost","root","","php-mysql");
+$mysql = new mysqli("localhost","goshivskiy","Goshandr2022","goshivskiy");
 if(is_array($ids)){
    foreach($ids as $id){
       if (!$id) {
