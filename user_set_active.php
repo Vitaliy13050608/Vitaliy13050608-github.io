@@ -1,7 +1,7 @@
 <?php
 $ids = $_POST['id'];
 
-$mysql = new mysqli("localhost","root","","php-mysql");
+$mysql = new mysqli("localhost","goshivskiy","Goshandr2022","goshivskiy");
 foreach($ids as $id){
   if (!$id) {
     echo "{status: false, error:true, message: id doesn't exist}";
