@@ -28,7 +28,7 @@
                                         </thead>
                                         <tbody>
                                         <?php
-                                        $mysql = new mysqli("localhost","root","","php-mysql");
+                                        $mysql = new mysqli("localhost","goshivskiy","Goshandr2022","goshivskiy");
                                         $mysql->query("SET NAMES 'utf8'");
 
                                         $result = $mysql->query("SELECT * FROM users");
@@ -74,20 +74,24 @@
                                                             <div class="modal-dialog">
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
-                                                                        <h5 class="modal-title" id="editLabel">Modal title</h5>
+                                                                        <h5 class="modal-title" id="editLabel">Edit</h5>
                                                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                     </div>
                                                                 <div class="modal-body">
                                                                     <form action="#">
                                                                         <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                                                                        <input class="form-control" placeholder="First name" id="firstname_<?php echo $row['id']; ?>" value="<?php echo $row['firstname']; ?>">
-                                                                        <input class="form-control" placeholder="Last name" id="lastname_<?php echo $row['id']; ?>" value="<?php echo $row['lastname']; ?>">
+                                                                        <label for="firstname_<?php echo $row['id']; ?>" value="<?php echo $row['firstname']; ?>" class="col-form-label">First name</label>
+                                                                        <input type="text" class="form-control" id="firstname_<?php echo $row['id']; ?>" value="<?php echo $row['firstname']; ?>">
+                                                                        <label for="lastname_<?php echo $row['id']; ?>" value="<?php echo $row['lastname']; ?>" class="col-form-label">Last name</label>
+                                                                        <input type="text" class="form-control" id="lastname_<?php echo $row['id']; ?>" value="<?php echo $row['lastname']; ?>">
+                                                                        
                                                                         <div class="switch">
-                                                                            <input class="check-box" type="checkbox" id="activation_<?php echo $row['id']; ?>" <?php if($row['activation'] == 'on'){ echo " checked";} ?>>
-                                                                            <label for="activation">Status</label>
+                                                                        <label for="activation"class="col-form-label">Status</label>  
+                                                                        <input class="check-box" type="checkbox" id="activation_<?php echo $row['id']; ?>" <?php if($row['activation'] == 'on'){ echo " checked";} ?>>
+                                                                            
                                                                         </div>
+                                                                        <label for="role_<?php echo $row['id']; ?>" class="col-form-label">Role</label>
                                                                         <select class="form-control" id="role_<?php echo $row['id']; ?>">
-                                                                            <option hidden>Role</option>
                                                                             <option <?php if($row['role'] == 'Admin'){ echo " selected";} ?>>Admin</option>
                                                                             <option <?php if($row['role'] == 'User'){ echo " selected";} ?>>User</option>
                                                                         </select>
