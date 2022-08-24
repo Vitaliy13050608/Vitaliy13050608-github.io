@@ -56,19 +56,26 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="addLabel">Modal title</h5>
+                <h5 class="modal-title" id="addLabel">Add</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form action="#">
-                    <input class="form-control" placeholder="First name" id="firstname">
-                    <input class="form-control" placeholder="Last name" id="lastname">
+                <div class="mb-3">
+            <label for="firstname" class="col-form-label">First name</label>
+            <input type="text" class="form-control" id="firstname">
+          </div>
+          <div class="mb-3">
+            <label for="lastname" class="col-form-label">Last name</label>
+            <input type="text" class="form-control" id="lastname">
+          </div>
                     <div class="switch">
-                    <input class="check-box" type="checkbox" id="activation">
-                    <label for="activation">Status</label>
+                    <label for="activation" class="col-form-label">Status</label>
+                    <input name="Status" class="check-box" type="checkbox" id="activation">
+                    
                     </div>
+                    <label for="role" class="col-form-label">Role</label>
                     <select class="form-control" id="role">
-                        <option hidden>Role</option>
                         <option>Admin</option>
                         <option>User</option>
                     </select>
@@ -129,4 +136,5 @@
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
+</html>
 </html>
